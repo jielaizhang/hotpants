@@ -1,13 +1,19 @@
 #include<stdio.h>
 #include<string.h>
 #include<math.h>
-#include<malloc.h>
 #include<stdlib.h>
 #include<fitsio.h>
 
 #include "defaults.h"
 #include "globals.h"
 #include "functions.h"
+
+#if !defined(__MACH__)
+#include <malloc.h>
+#endif
+#if defined(__MACH__)
+#include <stdlib.h>
+#endif
 
 /*
   

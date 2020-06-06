@@ -2,9 +2,15 @@
 #include<string.h>
 #include<strings.h>
 #include<math.h>
-#include<malloc.h>
 #include<stdlib.h>
 #include<fitsio.h>
+
+#if !defined(__MACH__)
+#include <malloc.h>
+#endif
+#if defined(__MACH__)
+#include <stdlib.h>
+#endif
 
 #define max(x,y) x>y?x:y
 #define min(x,y) x<y?x:y
